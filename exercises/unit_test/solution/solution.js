@@ -1,4 +1,4 @@
-exports.name = 'hello';
+exports.name = 'hello'
 
 exports.something = function(cb){
   setTimeout(function(){
