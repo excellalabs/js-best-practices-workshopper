@@ -1,0 +1,25 @@
+{
+  "name": "js-best-practices",
+  "version": "0.0.1",
+  "description": "Nodeschool workshopper to learn javascript best practices",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "chalk": "^1.0.0",
+    "colors": "^1.1.2",
+    "mocha": "^2.4.5",
+    "workshopper": "^2.6.0",
+    "workshopper-exercise": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodeschool",
+    "videogame",
+    "workshopper"
+  ],
+  "author": "thegrtman",
+  "license": "ISC"
+}
