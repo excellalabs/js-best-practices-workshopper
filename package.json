@@ -2,7 +2,7 @@
   "name": "js-best-practices",
   "version": "0.0.1",
   "description": "Nodeschool workshopper to learn javascript best practices",
-  "main": "index.js",
+  "main": "js-best-practices.js",
   "dependencies": {
     "chai": "^3.5.0",
     "chalk": "^1.0.0",
@@ -13,6 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node js-best-practices.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
