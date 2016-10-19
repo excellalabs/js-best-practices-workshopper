@@ -15,7 +15,9 @@ function createTestRunner(definedTestRunner, mochaOptions){
       definedTestRunner.call(this, submission, context.it)
     })
     
-    mochaInstance.run(callback)
+    mochaInstance.run(function(err){
+      callback(err);
+    });
   }
 }
 

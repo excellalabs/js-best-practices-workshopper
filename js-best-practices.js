@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 
-
-const workshopper = require('workshopper')
-    , path        = require('path')
-
-
-workshopper({
-    name        : 'js-best-practices'
-  , title       : 'Javascript Best Practices'
-  , exerciseDir : path.join(__dirname, 'exercises')
-  , appDir      : __dirname
-  , languages   : ['en']
+const jsBestPractices = require('workshopper-adventure')({
+    appDir: __dirname,
+    languages: ['en'],
+    header: require('workshopper-adventure/default/header'),
+    footer: require('workshopper-adventure/default/footer')
 });
+
+jsBestPractices.addAll([
+    'BASIC',
+    'TDD'
+]);
+
+module.exports = jsBestPractices;
