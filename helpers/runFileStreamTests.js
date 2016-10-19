@@ -20,7 +20,7 @@ function createFileStreamTestRunner(definedTestRunner, mochaOptions){
 }
 
 function runTests(exercise, testRunner, mochaOptions){
-  exercise.addVerifyProcessor(createTestRunner(testRunner, mochaOptions));
+  exercise.addVerifyProcessor(createFileStreamTestRunner(testRunner, mochaOptions));
   exercise.getSolutionFiles = function(callback){
     var translated = path.join(this.dir, './solution_' + this.lang)
     var fallback = path.join(this.dir, './solution')
