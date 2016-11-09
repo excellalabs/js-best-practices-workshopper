@@ -3,11 +3,17 @@
   "subtitle": "\u001b[23mSelect an exercise and hit \u001b[3mEnter\u001b[23m to begin",
   "menu": {
     "credits": "CREDITS",
-    "init": "INITIALIZE WORKING DIRECTORY"
+    "init": "INITIALIZE WORKING DIRECTORY",
+    "quiz": "Final Exam"
   },
   "exercise": {
-    "basic": "EXAMPLE: Console output comparison",
+    "get started": "Start here",
+    "decompose balanceManager": "Separation of Concerns 1",
+    "decompose changeHandler": "Separation of Concerns 2",
+    "decompose productInventory": "Separation of Concerns 3",
     "file stream": "Getting Rid of Switch Statements",
-    "tdd": "Test Driven Development"
+    "tdd": "Test Driven Development",
+    "bad practices": "Fix Your Teammates' Mistakes",
+    "verify vendingMachine": "Verify Your Full Vending Machine Implementation"
   }
 }
