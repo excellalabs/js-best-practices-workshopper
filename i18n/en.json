@@ -15,5 +15,19 @@
     "tdd": "Test Driven Development",
     "bad practices": "Fix Your Teammates' Mistakes",
     "verify vendingMachine": "Verify Your Full Vending Machine Implementation"
+  },
+  "quizzes": {
+    "first": {
+      "title": "First Quiz",
+      "questions": [{
+        "question": "What is your favorite color?",
+        "answers": [
+          ["Red", "Correct. Red is the best color."],
+          ["Yellow", "Wrong. Everyone knows Red is best."],
+          ["Blue", "Failure. Go stare at a Red wall and discover it is the best color."],
+          ["Other", "Nope. Red was the obvious winner."]
+        ]
+      }]
+    }
   }
 }
