@@ -9,9 +9,9 @@ const jsBestPractices = require('workshopper-adventure')({
 });
 
 jsBestPractices.addAll([
-    'BASIC',
-    'TDD',
-    'FILE STREAM'
+    'basic',
+    'tdd',
+    'file stream'
 ]);
 
 module.exports = jsBestPractices;

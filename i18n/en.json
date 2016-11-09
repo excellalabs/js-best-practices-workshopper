@@ -6,7 +6,8 @@
     "init": "INITIALIZE WORKING DIRECTORY"
   },
   "exercise": {
-    "basic": "CONSOLE OUTPUT COMPARISON",
-    "unit test": "UNIT TESTING SUBMISSION"
+    "basic": "EXAMPLE: Console output comparison",
+    "file stream": "Getting Rid of Switch Statements",
+    "tdd": "Test Driven Development"
   }
 }
