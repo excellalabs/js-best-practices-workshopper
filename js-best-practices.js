@@ -11,7 +11,10 @@ const jsBestPractices = require('workshopper-adventure')({
 jsBestPractices.addAll([
     'basic',
     'tdd',
-    'file stream'
+    'file stream',
+    'decompose balanceManager',
+    'decompose changeHandler',
+    'decompose productInventory'
 ]);
 
 module.exports = jsBestPractices;
