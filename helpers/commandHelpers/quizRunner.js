@@ -65,7 +65,7 @@ function doSerial(array, toDo){
     if(i >= array.length){
       return;
     }
-    return toDo(array[i], i++).then(function() { next(); });
+    return toDo(array[i], i++).then(function() { return next(); });
   }
   return next();
 }
