@@ -1,5 +1,8 @@
 
 var chalk = require('chalk');
+var createMenu = require('simple-terminal-menu');
+
+const LINE_LENGTH = 73;
 
 module.exports = function runQuiz(shop, quizIndex) {
   var __ = shop.i18n.__;
@@ -12,50 +15,51 @@ module.exports = function runQuiz(shop, quizIndex) {
 
 function showQuestion(shop, question, isFinalQuestion) {
   return new Promise(function(res, rej){
-    console.log('isFinalQuestion', isFinalQuestion);
     var __ = shop.i18n.__;
-    var __n = shop.i18n.__n;
-    var menuOptions = {
-      title: question.title,
-      subtitle: question.question,
-      menu: question.answers.map(function (answerArray) {
-        var answer = answerArray[0];
-        var resolutions = answerArray.slice(1);
-        return {
-          label: chalk.bold('» ' + answer),
-          handler: function() {
-            doSerial(resolutions, function(resolution, i){
-              return showResolution(shop, question, resolution, isFinalQuestion && i === resolutions.length - 1);
-            }).then(res);
-          }
-        }
-      }),
-      extras: [{
-        label: chalk.bold(__('menu.exit')),
-        handler: process.exit.bind(process, 0)
-      }]
-    };
-    shop.options.menuFactory.options.selected = undefined;
-    shop.options.menuFactory.create(menuOptions);
+
+    var menu = createMenu({
+      width: LINE_LENGTH,
+      x: 2,
+      y: 2
+    });
+    menu.writeTitle(question.title);
+    writeTextMultiline(menu, question.question);
+
+    menu.writeSeparator();
+
+    question.answers.forEach(function (answerArray) {
+      var answer = answerArray[0];
+      var resolutions = answerArray.slice(1);
+      menu.add(chalk.bold('» ' + answer), function() {
+        doSerial(resolutions, function(resolution, i){
+          return showResolution(shop, question, resolution, isFinalQuestion && i === resolutions.length - 1);
+        }).then(res);
+      });
+    });
+
+    menu.writeSeparator();
+
+    menu.add(chalk.bold(__('menu.exit')), process.exit.bind(process, 0));
   });
 }
 
 function showResolution(shop, question, resolution, isFinalResolution){
   return new Promise(function(res, rej) {
-    console.log('isFinalResolution', isFinalResolution);
     var __ = shop.i18n.__;
-    var __n = shop.i18n.__n;
-    var menuOptions = {
-      title: question.title,
-      subtitle: resolution,
-      menu: [{
-        label: chalk.bold('» ' + __(isFinalResolution ? 'menu.quizDone' : 'menu.nextQuestion')),
-        handler: res
-      }],
-      extras: []
-    };
-    shop.options.menuFactory.options.selected = undefined;
-    shop.options.menuFactory.create(menuOptions);
+
+    var menu = createMenu({
+      width: LINE_LENGTH,
+      x: 2,
+      y: 2
+    });
+    menu.writeTitle(question.title);
+    writeTextMultiline(menu, resolution);
+
+    menu.writeSeparator();
+    
+    menu.add(chalk.bold('» ' + __(isFinalResolution ? 'menu.quizDone' : 'menu.nextQuestion')), res);
+
+    menu.writeSeparator();
   });
 }
 
@@ -68,4 +72,19 @@ function doSerial(array, toDo){
     return toDo(array[i], i++).then(function() { return next(); });
   }
   return next();
+}
+
+function writeTextMultiline(menu, text) {
+  text = text.trim();
+  if(text.length <= LINE_LENGTH) {
+    menu.writeLine(text);
+    return;
+  }
+  var breakLineAt = text.lastIndexOf(' ', LINE_LENGTH);
+  if(breakLineAt === -1){
+    breakLineAt = LINE_LENGTH;
+  }
+  var line = text.substring(0, breakLineAt);
+  menu.writeLine(line);
+  writeTextMultiline(menu, text.substring(breakLineAt));
 }
