@@ -9,12 +9,14 @@ const jsBestPractices = require('workshopper-adventure')({
 });
 
 jsBestPractices.addAll([
-    'basic',
-    'tdd',
-    'file stream',
+    'get started',
     'decompose balanceManager',
     'decompose changeHandler',
-    'decompose productInventory'
+    'decompose productInventory',
+    'switch statement',
+    'tdd',
+    'bad practices',
+    'verify vendingMachine'
 ]);
 
 module.exports = jsBestPractices;
