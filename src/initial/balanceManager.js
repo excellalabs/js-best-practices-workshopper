@@ -9,7 +9,7 @@ module.exports = {
   },
   canAfford: function(amount){
     if(isValidAmount(amount)){
-        errorMessage = "Invalid Input";
+        caErrorMessage = "Invalid Input";
         throw new Error(errorMessage);
     }
     return amount <= balance;
@@ -18,7 +18,7 @@ module.exports = {
   // enough to cover the purchase, the method throws an error. 
   decreaseBalance: function(amount){
     if(!canAfford(amount)){
-      var errorMessage = 'Insufficient balance';
+      var dbErrorMessage = 'Insufficient balance';
       throw new Error(errorMessage);
     }
     balance -= amount;
