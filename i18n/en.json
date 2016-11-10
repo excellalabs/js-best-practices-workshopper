@@ -18,26 +18,26 @@
   },
   "quizzes": {
     "first": {
-      "title": "Final Exam",
+      "title": "Final Quiz",
       "questions": [{
         "question": "True or False: It is good practice to put your scripts within the <head> tag of an HTML document.",
         "answers": [
           ["True", "Incorrect. Browsers render pages more slowly when scripts are in the <head> tag (as opposed to <body>)."],
-          ["False", "Correct. browsers render pages more slowly when scripts are in the <head> tag (as opposed to <body>)."]
+          ["False", "Correct! browsers render pages more slowly when scripts are in the <head> tag (as opposed to <body>)."]
         ]
       },
       {
         "question": "What does TDD (Test Driven Development) mean?",
         "answers": [
           ["Test-Switch-Code", "Incorrect. The correct answer is 'Red-Green-Refactor.'"],
-          ["Red-Green-Refactor", "Correct."],
+          ["Red-Green-Refactor", "Correct!"],
           ["Blue-Orange-Rewrite", "Incorrect. The correct answer is 'Red-Green-Refactor.'"]  
         ]
       },
       {
         "question": "True or False: FIRST stands for Fast, Isolated, Repeatable, Self-Verifying, Timely.",
         "answers": [
-          ["True", "Correct."],
+          ["True", "Correct!"],
           ["False", "Incorrect."]
         ]
       },
@@ -46,7 +46,7 @@
         "answers": [
           ["Yes, you absolutely MUST use semi-colons.", "Incorrect. It is up to you; just be consistent."],
           ["No, you should NEVER use semi-colons.", "Incorrect. It is up to you; just be consistent."],
-          ["It is up to you; just be consistent", "Correct."]
+          ["It is up to you; just be consistent", "Correct!"]
         ]
       },
       {
@@ -54,14 +54,14 @@
         "answers": [
           ["myObj = {};", "Incorrect. Use \"var myObj = {}\"."],
           ["Object myObj;", "Incorrect. Use \"var myObj = {}\"."],
-          ["var myObj = {};", "Correct."]
+          ["var myObj = {};", "Correct!"]
         ]
       },
       {
         "question": "Select the corresponding SOLID principle: \"Software entities (functions) should be open for extension, but closed for modification.\"",
         "answers": [
           ["Single Responsibility Principle", "Incorrect. Correct answer is Open Closed Principle."],
-          ["Open Closed Principle", "Correct."],
+          ["Open Closed Principle", "Correct!"],
           ["Liskov Substitution Principle", "Incorrect. Correct answer is Open Closed Principle."],
           ["Interface Segregation Principle", "Incorrect. Correct answer is Open Closed Principle."],
           ["Dependency Inversion Principle", "Incorrect. Correct answer is Open Closed Principle."]
@@ -71,17 +71,17 @@
         "question": "Select the corresponding SOLID principle: \"Depend on abstractions, not on concretions.\"",
         "answers": [
           ["Single Responsibility Principle", "Incorrect. Correct answer is Dependency Inversion Principle."],
-          ["Open Closed Principle", "Correct.", "Incorrect. Correct answer is Dependency Inversion Principle."],
+          ["Open Closed Principle", "Incorrect. Correct answer is Dependency Inversion Principle."],
           ["Liskov Substitution Principle", "Incorrect. Correct answer is Dependency Inversion Principle."],
           ["Interface Segregation Principle", "Incorrect. Correct answer is Dependency Inversion Principle."],
-          ["Dependency Inversion Principle", "Correct."]
+          ["Dependency Inversion Principle", "Correct!"]
         ]
       },
       {
         "question": "Select the corresponding SOLID principle: \"Each function and module should only have one responsibility.\"",
         "answers": [
-          ["Single Responsibility Principle", "Correct."],
-          ["Open Closed Principle", "Correct.", "Incorrect. Correct answer is Single Responsibility Principle."],
+          ["Single Responsibility Principle", "Correct!"],
+          ["Open Closed Principle", "Incorrect. Correct answer is Single Responsibility Principle."],
           ["Liskov Substitution Principle", "Incorrect. Correct answer is Single Responsibility Principle."],
           ["Interface Segregation Principle", "Incorrect. Correct answer is Single Responsibility Principle."],
           ["Dependency Inversion Principle", "Incorrect. Correct answer is Single Responsibility Principle."]
@@ -91,9 +91,9 @@
         "question": "Select the corresponding SOLID principle: \"Clients should not be forced to depend upon interfaces that they do not use.\"",
         "answers": [
           ["Single Responsibility Principle", "Incorrect. Correct answer is Interface Segregation Principle."],
-          ["Open Closed Principle", "Correct.", "Incorrect. Correct answer is Interface Segregation Principle."],
+          ["Open Closed Principle", "Incorrect. Correct answer is Interface Segregation Principle."],
           ["Liskov Substitution Principle", "Incorrect. Correct answer is Interface Segregation Principle."],
-          ["Interface Segregation Principle", "Correct."],
+          ["Interface Segregation Principle", "Correct!"],
           ["Dependency Inversion Principle", "Incorrect. Correct answer is Interface Segregation Principle."]
         ]
       },
@@ -101,8 +101,8 @@
         "question": "Select the corresponding SOLID principle: \"Derived classes must be substitutable for their base classe.\"",
         "answers": [
           ["Single Responsibility Principle", "Incorrect. Correct answer is Liskov Substitution Principle."],
-          ["Open Closed Principle", "Correct.", "Incorrect. Correct answer is Liskov Substitution Principle."],
-          ["Liskov Substitution Principle", "Correct."],
+          ["Open Closed Principle", "Incorrect. Correct answer is Liskov Substitution Principle."],
+          ["Liskov Substitution Principle", "Correct!"],
           ["Interface Segregation Principle", "Incorrect. Correct answer is Liskov Substitution Principle."],
           ["Dependency Inversion Principle", "Incorrect. Correct answer is Liskov Substitution Principle."]
         ]
@@ -115,21 +115,21 @@
           "answers": [
             ["var message = \"Choice A.\";", "False. Both will properly create a string. Just ensure you choose one way and remain consistent throughout your project."],
             ["var message = 'Choice B.';", "Both will properly create a string. Just ensure you choose one way and remain consistent throughout your project."],
-            ["Both a) and b) will properly create a string. Just ensure you choose one way and remain consistent throughout your project.", "Correct."]
+            ["Both a) and b) will properly create a string. Just ensure you choose one way and remain consistent throughout your project.", "Correct!"]
           ]
         },
         {
           "question": "True or false: The == comparator in JavaScript functions the same way as the === comparator.",
           "answers": [
-            ["true", "Wrong. The === comparator requires both types to be the same to be considered equal. == converts types if necessary before equality comparison."],
-            ["false", "Right.  The === comparator requires both types to be the same to be considered equal. == converts types if necessary before equality comparison."]
+            ["True", "Incorrect. The === comparator requires both types to be the same to be considered equal. == converts types if necessary before equality comparison."],
+            ["False", "Correct! The === comparator requires both types to be the same to be considered equal. == converts types if necessary before equality comparison."]
           ]
         },
         {
-          "question": "True or false: null === undefined",
+          "question": "True or False: null === undefined",
           "answers": [
-            ["true", "Wrong. Null == undefined is true, but the === operator will pick up the difference between the two."],
-            ["false", "Correct! The === operator picks up the difference between the two. Using the == operator instead would make the statement true."]
+            ["True", "Incorrect. Null == undefined is true, but the === operator will pick up the difference between the two."],
+            ["False", "Correct! The === operator picks up the difference between the two. Using the == operator instead would make the statement true."]
           ]
         }]
     }
