@@ -10,8 +10,13 @@ module.exports = [{
     copyFiles(initialDirectory, userDirectory)
   }
 }, {
-  aliases: ['first quiz'],
+  aliases: ['quiz one'],
   handler: function(shop) {
     quizRunner(shop, 0).then(process.exit.bind(process, 0));
+  }
+}, {
+  aliases: ['quiz two'],
+  handler: function(shop) {
+    quizRunner(shop, 1).then(process.exit.bind(process, 0));
   }
 }];
