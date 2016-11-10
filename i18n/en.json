@@ -28,6 +28,31 @@
           ["Other", "Nope. Red was the obvious winner."]
         ]
       }]
+    },
+    "second": {
+      "title": "Best Practices Quiz",
+      "questions": [{
+          "question": "Which of the following variable declarations will properly create a string in JavaScript?",
+          "answers": [
+            ["var message = \"Choice A.\";", "False. Both will properly create a string. Just ensure you choose one way and remain consistent throughout your project."],
+            ["var message = 'Choice B.';", "Both will properly create a string. Just ensure you choose one way and remain consistent throughout your project."],
+            ["Both a) and b) will properly create a string. Just ensure you choose one way and remain consistent throughout your project.", "Correct."]
+          ]
+        },
+        {
+          "question": "True or false: The == comparator in JavaScript functions the same way as the === comparator.",
+          "answers": [
+            ["true", "Wrong. The === comparator requires both types to be the same to be considered equal. == converts types if necessary before equality comparison."],
+            ["false", "Right.  The === comparator requires both types to be the same to be considered equal. == converts types if necessary before equality comparison."]
+          ]
+        },
+        {
+          "question": "True or false: null === undefined",
+          "answers": [
+            ["true", "Wrong. Null == undefined is true, but the === operator will pick up the difference between the two."],
+            ["false", "Correct! The === operator picks up the difference between the two. Using the == operator instead would make the statement true."]
+          ]
+        }]
     }
   }
 }
