@@ -18,7 +18,7 @@
   },
   "quizzes": {
     "first": {
-      "title": "First Quiz",
+      "title": "Final Exam",
       "questions": [{
         "question": "True or False: It is good practice to put your scripts within the <head> tag of an HTML document.",
         "answers": [
