@@ -7,10 +7,13 @@
     "nextQuestion": "Next",
     "quizDone": "Finish",
     "quiz one": "BEST PRACTICES QUIZ",
-    "quiz two": "FINAL EXAM"
+    "quiz two": "FINAL EXAM",
+    "fileExists": "The {{{fileType}}} at location {{{filePath}}} already exists, do you want to overwrite it?",
+    "yes": "Yes",
+    "no": "No"
   },
   "exercise": {
-    "get started": "Start here - INC",
+    "get started": "Getting Started",
     "decompose balanceManager": "Separation of Concerns 1 - INC",
     "decompose changeHandler": "Separation of Concerns 2 - INC",
     "decompose productInventory": "Separation of Concerns 3 - INC",
