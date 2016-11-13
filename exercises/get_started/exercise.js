@@ -5,6 +5,8 @@ var shop = require('../../js-best-practices');
 
 module.exports = function buildExercise(){
   printProblem().then(function(){
+    return waitForInput('press any key to continue...');
+  }).then(function(){
     shop.execute(['init']);
   });
   
@@ -39,8 +41,6 @@ function printProblem(){
     stream.append(problem, 'md');
     stream.pipe(require('workshopper-adventure/lib/mseePipe')())
           .pipe(process.stdout)
-    stream.on('end', function(){
-      waitForInput('press any key to continue...').then(res, rej);
-    });
+    stream.on('end', res);
   });
 }
