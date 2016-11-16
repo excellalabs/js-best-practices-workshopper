@@ -8,15 +8,19 @@ module.exports = {
     return balance;
   },
   canAfford: function(amount){
-    if(isValidAmount(amount)){
+    if(this.isValidAmount(amount)){
         var errorMessage = 'Invalid Input';
+    }
+    if(errorMessage){
         throw new Error(errorMessage);
     }
     return amount <= balance;
   },
   decreaseBalance: function(amount){
-    if(!canAfford(amount)){
+    if(!this.canAfford(amount)){
       var errorMessage = 'Insufficient balance';
+    }
+    if(errorMessage){
       throw new Error(errorMessage);
     }
     balance -= amount;

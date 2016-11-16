@@ -11,7 +11,7 @@ module.exports = {
     return amount <= balance;
   },
   decreaseBalance: function(amount){
-    if(!canAfford(amount)){
+    if(!this.canAfford(amount)){
       throw new Error('Insufficient balance');
     }
     balance -= amount;
