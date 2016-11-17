@@ -10,27 +10,27 @@ exercise = filecheck(exercise);
 
 
 // runs unit tests on submission
-//exercise = runFileStreamTests(exercise, function(fileContents, test){
-//  test('should not contain inconsistent quotes', function(){
-//    var regexSingleQuotes = /\'/;
-//    var regexDoubleQuotes = /\"/;
-//    if (regexSingleQuotes.test(fileContents)) {
-//        expect(regexDoubleQuotes.test(fileContents)).to.equal(false);
-//    } else {
-//        expect(regexSingleQuotes.test(fileContents)).to.equal(false);
-//    }
-//  });
-//
-//  test('should not contain comment to explain simple method', function() {
-//      var regexComment = /\/\//;
-//      expect(regexComment.test(fileContents)).to.equal(false);
-//  });
-//
-//  test('should not have globally scoped variable', function (){
-//      var regexVariable = /var /;
-//      expect(regexVariable.test(fileContents)).to.equal(false);
-//  });
-//});
+exercise = runFileStreamTests(exercise, function(fileContents, test){
+  test('should not contain inconsistent quotes', function(){
+    var regexSingleQuotes = /\'/;
+    var regexDoubleQuotes = /\"/;
+    if (regexSingleQuotes.test(fileContents)) {
+        expect(regexDoubleQuotes.test(fileContents)).to.equal(false);
+    } else {
+        expect(regexSingleQuotes.test(fileContents)).to.equal(false);
+    }
+  });
+
+  test('should not contain comment to explain simple method', function() {
+      var regexComment = /\/\//;
+      expect(regexComment.test(fileContents)).to.equal(false);
+  });
+
+  test('should not have globally scoped variable', function (){
+      var regexVariable = /var /;
+      expect(regexVariable.test(fileContents)).to.equal(false);
+  });
+});
 
 
 exercise = runTests(exercise, function(balanceManager, test){
