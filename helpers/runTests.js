@@ -12,7 +12,7 @@ function createTestRunner(definedTestRunner, mochaOptions){
     mochaInstance.addFile(this.args[0])
     
     mochaInstance.suite.on('post-require', function(context){
-      definedTestRunner.call(this, submission, context.it)
+      definedTestRunner.call(this, submission, context.it, context.suite, context.beforeEach)
     })
     
     mochaInstance.run(function(err){

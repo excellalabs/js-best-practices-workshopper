@@ -13,6 +13,9 @@ module.exports = {
     balanceManager.decreaseBalance(product.price);
     return product;
   },
+  getProducts: function(){
+    return productInventory.getProducts();
+  },
   releaseChange: function(){
     var balance = balanceManager.getBalance();
     balanceManager.decreaseBalance(balance);
