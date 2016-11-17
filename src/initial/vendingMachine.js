@@ -1,40 +1,46 @@
 
+var balanceManager = require('./balanceManager');
+var changeHandler = require('./changeHandler');
+var productInventory = require('./productInventory');
+
 var balance = 0;
 
+var products = [
+  {
+    name: 'Skittles',
+    price: 85,
+    id: 'A1'
+  }
+];
+
 module.exports = {
-  insertCoin: function(coinType){
-    var value = this.getAmount(coinType);
-    this.increaseBalance(value);
-  },
-  vendProduct: function(productId){
-    var product = this.getProduct(productId);
-    this.decreaseBalance(product.price);
-    return product;
-  },
-  releaseChange: function(){
-    var balance = this.getBalance();
-    this.decreaseBalance(balance);
-    return this.convertToChange(balance);
-  },
-  getProducts: function() { 
-    return [
-      {
-        name: 'Skittles',
-        price: 85,
-        id: 'A1'
-      }
-    ];
-  },
-  getProduct: function(productId) {
-    switch(productId){
-      case 'A1':
-        return {
-          name: 'Skittles',
-          price: 85
-        };
+   canAfford: function(amount){
+    if(!this.isValidAmount(amount)){
+        errorMessage = "Invalid Input";
     }
+    if(errorMessage){
+        throw new Error(errorMessage);
+    }
+    return amount <= balance;
   },
-  getAmount: function(coinType) {
+  decreaseBalance: function(amount){
+    // This method decreases the balance of the vending machine. If the balance amount is not 
+    // enough to cover the purchase, the method throws an error. 
+    var errorMessage;
+    if(!this.canAfford(amount)){
+        errorMessage = 'Insufficient balance';
+    }
+    if(errorMessage){
+        throw new Error(errorMessage);
+    }
+    balance -= amount;
+  },
+ getAmount: function(coinType) {
+    // COINS:
+    // [p]enny
+    // [n]ickel
+    // [d]ime
+    // [q]uarter
     switch(coinType){
       case 'p': return 1;
       case 'n': return 5;
@@ -43,25 +49,23 @@ module.exports = {
       default: throw new Error('Unrecognized coin ' + coinType);
     }
   },
-  increaseBalance: function(amount){
-    balance += amount;
-  },
   getBalance: function(){ 
     return balance;
   },
-  canAfford: function(amount){
-    if(this.isValidAmount(amount)){
-        errorMessage = "Invalid Input";
-        throw new Error(errorMessage);
-    }
-    return amount <= balance;
+  getProducts: function() { 
+    return products;
   },
-  decreaseBalance: function(amount){
-    if(!this.canAfford(amount)){
-      var errorMessage = 'Insufficient balance';
-      throw new Error(errorMessage);
-    }
-    balance -= amount;
+  getProduct: function(productId) {
+    var product = products.find(function(p) { return p.id === productId; });
+    return product;
+  },
+  
+  increaseBalance: function(amount){
+    balance += amount;
+  },
+  insertCoin: function(coinType){
+    var value = changeHandler.getAmount(coinType);
+    balanceManager.increaseBalance(value);
   },
   isValidAmount: function(amount){
     if(amount === null){
@@ -69,5 +73,28 @@ module.exports = {
     } else {
       return true;
     }
-  }
+  },
+  releaseChange: function(){
+    var balance = balanceManager.getBalance();
+    balanceManager.decreaseBalance(balance);
+    return changeHandler.convertToChange(balance);
+  },
+    vendProduct: function(productId){
+    var product = productInventory.getProduct(productId);
+    balanceManager.decreaseBalance(product.price);
+    return product;
+  },
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
