@@ -28,8 +28,8 @@ exercise = runTests(exercise, function(vendingMachine, test, suite, beforeEach) 
   test('releaseChange should return the balance to zero', function(){
     vendingMachine.insertCoin('p');
     vendingMachine.insertCoin('q');
-    expect(vendingMachine.releaseChange()).to.not.equal([]);
-    expect(vendingMachine.releaseChange()).to.equal([]);
+    expect(vendingMachine.releaseChange()).to.not.eql([]);
+    expect(vendingMachine.releaseChange()).to.eql([]);
   });
 
   const coinageTestCases = [
@@ -43,7 +43,7 @@ exercise = runTests(exercise, function(vendingMachine, test, suite, beforeEach) 
       testCase.given.forEach(function(coin) {
         vendingMachine.insertCoin(coin);
       });
-      expect(vendingMachine.releaseChange()).to.equal(testCase.expected);
+      expect(vendingMachine.releaseChange()).to.eql(testCase.expected);
     });
   });
 });
