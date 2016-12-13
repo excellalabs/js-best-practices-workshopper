@@ -14,6 +14,7 @@ var products = [
 ];
 
 module.exports = {
+
    canAfford: function(amount){
     if(!this.isValidAmount(amount)){
         errorMessage = "Invalid Input";
@@ -23,6 +24,7 @@ module.exports = {
     }
     return amount <= balance;
   },
+
   decreaseBalance: function(amount){
     // This method decreases the balance of the vending machine. If the balance amount is not 
     // enough to cover the purchase, the method throws an error. 
@@ -35,7 +37,8 @@ module.exports = {
     }
     balance -= amount;
   },
- getAmount: function(coinType) {
+
+  getAmount: function(coinType) {
     // COINS:
     // [p]enny
     // [n]ickel
@@ -49,12 +52,15 @@ module.exports = {
       default: throw new Error('Unrecognized coin ' + coinType);
     }
   },
+
   getBalance: function(){ 
     return balance;
   },
+
   getProducts: function() { 
     return products;
   },
+
   getProduct: function(productId) {
     var product = products.find(function(p) { return p.id === productId; });
     return product;
@@ -63,10 +69,12 @@ module.exports = {
   increaseBalance: function(amount){
     balance += amount;
   },
+
   insertCoin: function(coinType){
-    var value = changeHandler.getAmount(coinType);
-    balanceManager.increaseBalance(value);
+    var value = this.getAmount(coinType);
+    this.increaseBalance(value);
   },
+
   isValidAmount: function(amount){
     if(amount === null){
       return false;
@@ -74,16 +82,19 @@ module.exports = {
       return true;
     }
   },
+
   releaseChange: function(){
-    var balance = balanceManager.getBalance();
-    balanceManager.decreaseBalance(balance);
-    return changeHandler.convertToChange(balance);
+    var currentBalance = this.getBalance();
+    this.decreaseBalance(currentBalance);
+    return this.convertToChange(currentBalance);
   },
+
     vendProduct: function(productId){
-    var product = productInventory.getProduct(productId);
-    balanceManager.decreaseBalance(product.price);
+    var product = this.getProduct(productId);
+    this.decreaseBalance(product.price);
     return product;
-  },
+  }
+
 };
 
 
