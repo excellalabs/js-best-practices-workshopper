@@ -27,7 +27,6 @@ jsBestPractices.addAll([
     'decompose productInventory',
     'switch statement',
     'tdd',
-    'file stream',
     'bad practices',
     'verify vendingMachine'
 ]);
