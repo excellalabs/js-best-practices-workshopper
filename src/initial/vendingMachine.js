@@ -14,13 +14,12 @@ var products = [
 ];
 
 module.exports = {
-
-   canAfford: function(amount){
+  canAfford: function(amount){
     if(!this.isValidAmount(amount)){
-        errorMessage = "Invalid Input";
+      errorMessage = "Invalid Input";
     }
     if(errorMessage){
-        throw new Error(errorMessage);
+      throw new Error(errorMessage);
     }
     return amount <= balance;
   },
@@ -89,23 +88,10 @@ module.exports = {
     return this.convertToChange(currentBalance);
   },
 
-    vendProduct: function(productId){
+  vendProduct: function(productId){
     var product = this.getProduct(productId);
     this.decreaseBalance(product.price);
     return product;
   }
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
