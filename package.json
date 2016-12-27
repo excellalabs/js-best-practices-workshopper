@@ -1,9 +1,9 @@
 {
   "name": "js-best-practices",
   "version": "0.0.1",
-  "description": "Nodeschool workshopper to learn javascript best practices",
+  "description": "Learn the best practices of writing clean JavaScript code.",
   "main": "run.js",
-  "repository": "https://github.com/excellalabs/js-best-practices-workshopper",
+  "repository": "https://github.com/excellalabs/js-best-practices",
   "dependencies": {
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
