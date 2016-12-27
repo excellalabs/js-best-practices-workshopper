@@ -1,6 +1,6 @@
 {
   "name": "js-best-practices",
-  "version": "0.0.2",
+  "version": "1.0.1",
   "description": "Learn the best practices of writing clean JavaScript code.",
   "main": "run.js",
   "repository": "https://github.com/excellalabs/js-best-practices",
