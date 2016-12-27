@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Learn the best practices of writing clean JavaScript code.",
   "main": "run.js",
-  "repository": "https://github.com/excellalabs/js-best-practices",
+  "repository": "https://github.com/excellalabs/js-best-practices-workshopper",
   "dependencies": {
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
