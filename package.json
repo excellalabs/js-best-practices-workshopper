@@ -1,6 +1,6 @@
 {
   "name": "js-best-practices",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Learn the best practices of writing clean JavaScript code.",
   "main": "run.js",
   "repository": "https://github.com/excellalabs/js-best-practices-workshopper",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node run.js"
+    "start": "node bin/run"
   },
   "keywords": [
     "nodeschool",
@@ -28,6 +28,6 @@
     "javascript",
     "workshopper"
   ],
-  "author": "thegrtman",
+  "author": "ExcellaLabs",
   "license": "ISC"
 }
