@@ -35,11 +35,10 @@ exercise = runTests(exercise, function(balanceManager, test){
   });
 
   test('should not have globally scoped variable', function (){
-      try {
-        balanceManager.canAfford(null)
-      } catch(e) {}
-      expect(function() { balanceManager.canAfford(0.1) }).to.not.throw(Error);
-      
+    try {
+        balanceManager.canAfford(null);
+    } catch(e) {}
+    expect(function() { balanceManager.canAfford(0.1) }).to.not.throw(Error); 
   });
 });
 
