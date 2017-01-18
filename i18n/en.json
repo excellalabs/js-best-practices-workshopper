@@ -14,13 +14,13 @@
   },
   "exercise": {
     "get started": "Getting Started",
-    "decompose balanceManager": "Separation of Concerns 1",
-    "decompose changeHandler": "Separation of Concerns 2",
-    "decompose productInventory": "Separation of Concerns 3",
+    "decompose balancemanager": "Separation of Concerns 1",
+    "decompose changehandler": "Separation of Concerns 2",
+    "decompose productinventory": "Separation of Concerns 3",
     "switch statement": "Getting Rid of Switch Statements",
     "tdd": "Test Driven Development",
     "bad practices": "Fix Your Teammates' Mistakes",
-    "verify vendingMachine": "Verify Your Full Vending Machine Implementation"
+    "verify vendingmachine": "Verify Your Full Vending Machine Implementation"
   },
   "quizzes": [
     [{

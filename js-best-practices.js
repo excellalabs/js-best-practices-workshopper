@@ -22,13 +22,13 @@ function fileError (id, file) {
 
 jsBestPractices.addAll([
     'get started',
-    'decompose balanceManager',
-    'decompose changeHandler',
-    'decompose productInventory',
+    'decompose balancemanager',
+    'decompose changehandler',
+    'decompose productinventory',
     'switch statement',
     'tdd',
     'bad practices',
-    'verify vendingMachine'
+    'verify vendingmachine'
 ]);
 
 module.exports = jsBestPractices;
