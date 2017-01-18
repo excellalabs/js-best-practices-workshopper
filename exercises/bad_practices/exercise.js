@@ -25,11 +25,7 @@ exercise = runFileStreamTests(exercise, function(fileContents, test){
       var regexComment = /\/\//;
       expect(regexComment.test(fileContents)).to.equal(false);
   });
-
-  test('should not have globally scoped variable', function (){
-      var regexVariable = /var /;
-      expect(regexVariable.test(fileContents)).to.equal(false);
-  });
+  
 });
 
 
@@ -39,14 +35,10 @@ exercise = runTests(exercise, function(balanceManager, test){
   });
 
   test('should not have globally scoped variable', function (){
-      try {
-          balanceManager.canAfford(null);
-      } catch(e) {}
-      try {
-          balanceManager.canAfford(0.1);
-      } catch(e) {
-        expect(e).to.equal(undefined);
-      }
+    try {
+        balanceManager.canAfford(null);
+    } catch(e) {}
+    expect(function() { balanceManager.canAfford(0.1) }).to.not.throw(Error); 
   });
 });
 
