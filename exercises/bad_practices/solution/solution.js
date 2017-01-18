@@ -8,8 +8,9 @@ module.exports = {
     return balance;
   },
   canAfford: function(amount){
-    if(this.isValidAmount(amount)){
-        var errorMessage = 'Invalid Input';
+    var errorMessage;
+    if(!this.isValidAmount(amount)){
+        errorMessage = 'Invalid Input';
     }
     if(errorMessage){
         throw new Error(errorMessage);
