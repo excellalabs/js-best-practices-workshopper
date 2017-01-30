@@ -12,8 +12,6 @@ var coins = {
   'q': 25
 };
 
-var coinsByAmount = ['q', 'd', 'n', 'p'];
-
 module.exports = {
   getAmount: function(coinType) {
     if(!coins.hasOwnProperty(coinType)){
