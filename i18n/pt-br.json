@@ -1,0 +1,137 @@
+{
+  "title": "JAVASCRIPT BOAS PRÁTICAS",
+  "subtitle": "\u001b[23mSelecione um exercício e tecle \u001b[3mEnter\u001b[23m para começar",
+  "menu": {
+    "credits": "CRÉDITOS",
+    "init": "INICIALIZAR O DIRETÓRIO DE TRABALHO",
+    "nextQuestion": "Próximo",
+    "quizDone": "Terminar",
+    "quiz one": "QUIZ DE BOAS PRÁTICAS",
+    "quiz two": "EXAME FINAL",
+    "fileExists": "O {{{fileType}}} no local {{{filePath}}} já existe, você deseja sobrescreve-lo?",
+    "yes": "Sim",
+    "no": "Não"
+  },
+  "exercise": {
+    "get started": "Começando",
+    "decompose balancemanager": "Separação de Preocupações (SoC) 1",
+    "decompose changehandler": "Separação de Preocupações (SoC) 2",
+    "decompose productinventory": "Separação de Preocupações (SoC) 3",
+    "switch statement": "Se livrando de declarações Switch",
+    "tdd": "Desenvolvimento Dirigido a Testes (TDD)",
+    "bad practices": "Conserte os erros de seus colegas",
+    "verify vendingmachine": "Verifique a sua implementação completa da máquina de vendas"
+  },
+  "quizzes": [
+    [{
+      "question": "Qual das seguintes declarações de variáveis irá criar de maneira correta uma string no JavaScript?",
+      "answers": [
+        ["var message = \"Choice A.\";", "Falso. Ambas irão criar uma string da maneira correta. Apenas garanta que você irá escolher um jeito e não mudará durante o projeto."],
+        ["var message = 'Choice B.';", "Ambas irão criar uma string da maneira correta. Apenas garanta que você irá escolher um jeito e não mudará durante o projeto."],
+        ["Ambas a) e b) irão criar uma string da maneira correta. Apenas garanta que você irá escolher um jeito e não mudará durante o projeto.", "Correto!"]
+      ]
+    },
+    {
+      "question": "Verdadeiro ou Falso: O operador de comparação == no JavaScript funciona da mesma forma que o comparador === .",
+      "answers": [
+        ["Verdadeiro", "Incorreto. O comparador === requere que o tipo dos valores comparados sejam o mesmo para serem considerados iguais. == converte o tipo se for necessário para comparação."],
+        ["Falso", "Correto! O comparador === requere que o tipo dos valores comparados sejam o mesmo para serem considerados iguais. == converte o tipo se for necessário para comparação."]
+      ]
+    },
+    {
+      "question": "Verdadeiro ou Falso: null === undefined",
+      "answers": [
+        ["Verdadeiro", "Incorreto. null == undefined é verdadeiro, mas o operador === irá retornar que os valores são diferentes."],
+        ["Falso", "Correto! O operador === irá retornar que os valores são diferentes. Usando o operador == fará com que o retorno seja verdadeiro."]
+      ]
+    }],
+    [{
+      "question": "Verdadeiro ou Falso: É uma boa prática colocar os seus scripts dentro da tag <head> em um documento HTML.",
+      "answers": [
+        ["Verdadeiro", "Incorreto. Navegadores demoram mais para renderizar páginas quando os scripts estão na tag <head> (ao contrário da tag <body>)."],
+        ["Falso", "Correto! Navegadores demoram mais para renderizar páginas quando os scripts estão na tag <head> (ao contrário da tag <body>)."]
+      ]
+    },
+    {
+      "question": "Como podemos definir o TDD (Test Driven Development)?",
+      "answers": [
+        ["Test-Switch-Code", "Incorreto. A resposta correta é 'Red-Green-Refactor.'"],
+        ["Red-Green-Refactor", "Correto!"],
+        ["Blue-Orange-Rewrite", "Incorreto. A resposta correta é 'Red-Green-Refactor.'"]  
+      ]
+    },
+    {
+      "question": "Verdadeiro ou Falso: O Acrônimo FIRST significa Fast, Isolated, Repeatable, Self-Verifying, Timely.",
+      "answers": [
+        ["Verdadeiro", "Correto!"],
+        ["Falso", "Incorreto."]
+      ]
+    },
+    {
+      "question": "É uma boa prática utilizar ponto-e-vírgula no seu código?",
+      "answers": [
+        ["Sim, Você definitivamente DEVE usar ponto-e-vírgula no seu código.", "Incorreto. você escolhe! Apenas seja consistente."],
+        ["Não, Você NUNCA deve utilizar ponto-e-vírgula no seu código.", "Incorreto. você escolhe! Apenas seja consistente."],
+        ["Você escolhe! Apenas seja consistente", "Correto!"]
+      ]
+    },
+    {
+      "question": "Qual das alternativas é a melhor forma de declarar uma variável local?",
+      "answers": [
+        ["myObj = {};", "Incorreto. Use \"var myObj = {}\"."],
+        ["Object myObj;", "Incorreto. Use \"var myObj = {}\"."],
+        ["var myObj = {};", "Correto!"]
+      ]
+    },
+    {
+      "question": "Selecione o princípio do SOLID correspondente: \"Software entities (functions) should be open for extension, but closed for modification.\"",
+      "answers": [
+        ["Single Responsibility Principle", "Incorreto. A resposta correta é Open Closed Principle."],
+        ["Open Closed Principle", "Correto!"],
+        ["Liskov Substitution Principle", "Incorreto. A resposta correta é Open Closed Principle."],
+        ["Interface Segregation Principle", "Incorreto. A resposta correta é Open Closed Principle."],
+        ["Dependency Inversion Principle", "Incorreto. A resposta correta é Open Closed Principle."]
+      ]
+    },
+    {
+      "question": "Selecione o princípio do SOLID correspondente: \"Depend on abstractions, not on concretions.\"",
+      "answers": [
+        ["Single Responsibility Principle", "Incorreto. A resposta correta é Dependency Inversion Principle."],
+        ["Open Closed Principle", "Incorreto. A resposta correta é Dependency Inversion Principle."],
+        ["Liskov Substitution Principle", "Incorreto. A resposta correta é Dependency Inversion Principle."],
+        ["Interface Segregation Principle", "Incorreto. A resposta correta é Dependency Inversion Principle."],
+        ["Dependency Inversion Principle", "Correto!"]
+      ]
+    },
+    {
+      "question": "Selecione o princípio do SOLID correspondente: \"Each function and module should only have one responsibility.\"",
+      "answers": [
+        ["Single Responsibility Principle", "Correto!"],
+        ["Open Closed Principle", "Incorreto. A resposta correta é Single Responsibility Principle."],
+        ["Liskov Substitution Principle", "Incorreto. A resposta correta é Single Responsibility Principle."],
+        ["Interface Segregation Principle", "Incorreto. A resposta correta é Single Responsibility Principle."],
+        ["Dependency Inversion Principle", "Incorreto. A resposta correta é Single Responsibility Principle."]
+      ]
+    },
+    {
+      "question": "Selecione o princípio do SOLID correspondente: \"Clients should not be forced to depend upon interfaces that they do not use.\"",
+      "answers": [
+        ["Single Responsibility Principle", "Incorreto. A resposta correta é Interface Segregation Principle."],
+        ["Open Closed Principle", "Incorreto. A resposta correta é Interface Segregation Principle."],
+        ["Liskov Substitution Principle", "Incorreto. A resposta correta é Interface Segregation Principle."],
+        ["Interface Segregation Principle", "Correto!"],
+        ["Dependency Inversion Principle", "Incorreto. A resposta correta é Interface Segregation Principle."]
+      ]
+    },
+    {
+      "question": "Selecione o princípio do SOLID correspondente: \"Derived classes must be substitutable for their base classe.\"",
+      "answers": [
+        ["Single Responsibility Principle", "Incorreto. A resposta correta é Liskov Substitution Principle."],
+        ["Open Closed Principle", "Incorreto. A resposta correta é Liskov Substitution Principle."],
+        ["Liskov Substitution Principle", "Correto!"],
+        ["Interface Segregation Principle", "Incorreto. A resposta correta é Liskov Substitution Principle."],
+        ["Dependency Inversion Principle", "Incorreto. A resposta correta é Liskov Substitution Principle."]
+      ]
+    }]
+  ]
+}
