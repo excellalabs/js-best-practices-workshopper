@@ -4,7 +4,7 @@ module.exports = {
   increaseBalance: function(amount){
     balance += amount;
   },
-  getBalance: function(){ 
+  getBalance: function(){
     return balance;
   },
   canAfford: function(amount){
@@ -15,5 +15,12 @@ module.exports = {
       throw new Error('Insufficient balance');
     }
     balance -= amount;
+  },
+  isValidAmount: function(amount){
+    if(amount === null){
+      return false;
+    } else {
+      return true;
+    }
   }
 };
