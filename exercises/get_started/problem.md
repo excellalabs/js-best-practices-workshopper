@@ -6,7 +6,7 @@ a bad codebase. Through the exercises, you will learn best practices to help kee
 as some bad practices to avoid.
 
 You will be making changes to a vending machine app. You will be given a file called `vendingMachine.js` as well as a few
-other empty js files. The next few excercises will have you break down the vending machine into a program that still functions
+other empty js files. The next few exercises will have you break down the vending machine into a program that still functions
 the same but is easier to maintain, test, and update. 
 
 When you exit this instructions screen, the files necessary for the exercises will be downloaded for you.
