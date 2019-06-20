@@ -4,7 +4,7 @@ var fs = require('fs');
 
 const jsBestPractices = require('workshopper-adventure')({
     appDir: __dirname,
-    languages: ['en', 'ru'],
+    languages: ['en', 'ru', 'pt-br'],
     header: require('workshopper-adventure/default/header'),
     footer: require('workshopper-adventure/default/footer'),
     commands: require('./helpers/customCommands')
