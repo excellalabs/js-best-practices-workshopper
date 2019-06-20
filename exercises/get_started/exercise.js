@@ -31,7 +31,8 @@ function waitForInput(prompt){
 
 function printProblem(){
   return new Promise(function(res, rej){
-    var problem = fs.readFileSync(path.join(__dirname, 'problem.md'));
+    var lang = shop.i18n.lang()
+    var problem = fs.readFileSync(path.join(__dirname, 'problem' + (lang === 'en' ? '' : '.' + lang) + '.md'));
     var stream = shop.createMarkdownStream({
       meta: {
         name: 'get started',
