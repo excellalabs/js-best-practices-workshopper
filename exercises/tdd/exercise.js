@@ -16,7 +16,7 @@ exercise = runTests(exercise, function(changeHandler, test){
     var balance = 42;
     var expected = ['d', 'n', 'p', 'p', 'q'];
 
-    var actual = changeHandler.convertToChange(balance).sort(function(a, b) { return a > b; });
+    var actual = changeHandler.convertToChange(balance).sort();
 
     expect(actual).to.eql(expected);
   });
@@ -34,7 +34,7 @@ exercise = runTests(exercise, function(changeHandler, test){
     var balance = 76;
     var expected = ['p', 'q', 'q', 'q'];
 
-    var actual = changeHandler.convertToChange(balance).sort(function(a, b) { return a > b; });
+    var actual = changeHandler.convertToChange(balance).sort();
 
     expect(actual).to.eql(expected);
   });
