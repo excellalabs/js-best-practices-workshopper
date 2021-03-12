@@ -4,7 +4,7 @@ module.exports = {
   increaseBalance: function(amount){
     balance += amount;
   },
-  getBalance: function(){ 
+  getBalance: function(){
     return balance;
   },
   canAfford: function(amount){
@@ -27,10 +27,6 @@ module.exports = {
     balance -= amount;
   },
   isValidAmount: function(amount){
-    if(!amount){
-      return false;
-    } else {
-      return true;
-    }
+    return amount !== null && amount !== undefined;
   }
 };

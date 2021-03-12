@@ -14,13 +14,17 @@ exercise = runTests(exercise, function(changeHandler, test) {
     test('should have a function called getBalance()', function() {
         expect(typeof changeHandler.getBalance).to.equal('function');
     });
-    
+
     test('should have a function called canAfford()', function() {
         expect(typeof changeHandler.canAfford).to.equal('function');
     });
 
     test('should have a function called decreaseBalance()', function() {
         expect(typeof changeHandler.decreaseBalance).to.equal('function');
+    });
+
+    test('should have a function called isValidAmount()', function() {
+        expect(typeof changeHandler.isValidAmount).to.equal('function');
     });
 
     test('should not have a function called getAmount()', function() {
@@ -41,10 +45,6 @@ exercise = runTests(exercise, function(changeHandler, test) {
 
     test('should not have a function called getProduct()', function() {
         expect(typeof changeHandler.getProduct).to.not.equal('function');
-    });
-
-    test('should not have a function called isValidAmount()', function() {
-        expect(typeof changeHandler.isValidAmount).to.not.equal('function');
     });
 })
 
